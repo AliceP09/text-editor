@@ -4,16 +4,16 @@ on: pull_request
 
 jobs:
   continuos-integration:
-    runs-on: ubutun-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-      - name: Using Node.jobs
+      - name: Using Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 24.x
+          node-version: 24.
       - name: run install, build and test
         run: |
           npm install
-          npm run build
+          npm run build 
           npm run test
